@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (emailInput.value.trim() === ''){
             mostrarError(errorEmail,emailInput, 'El correo es requerido');
+
         }else if (!emailPattern.test(emailInput.value.trim())){
             mostrarError(errorEmail,emailInput,'Ingrese un correo válido.');
             formValido = false;
@@ -58,7 +59,8 @@ document.addEventListener('DOMContentLoaded',()=>{
         if (passwordInput.value.trim() === ''){
             mostrarError(errorPassword,passwordInput,'La contraseña es requerida');
             formValido = false;
-        }else if (passwordInput.value.trim().lenght <6){
+
+        }else if (passwordInput.value.trim().length <6){
             mostrarError(errorPassword,passwordInput,'La contraseña debe ser mayor a seis caracteres');
             formValido = false;
         }
