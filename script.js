@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             mostrarError(errorEmail,emailInput, 'El correo es requerido');
         }else if (!emailPattern.test(emailInput.value.trim())){
             mostrarError(errorEmail,emailInput,'Ingrese un correo válido.');
-            formValido = false
+            formValido = false;
         }
         //Validación de contraseña
         if (passwordInput.value.trim() === ''){
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         }
         //validación de confirmación de contraseña
         if (confirmPasswordInput.value.trim() === ''){
-            mostrarError(errorConfirmPassword,confirmPasswordInput, 'Debe de reingresar la contraseña');
+            mostrarError(errorConfirmPassword,confirmPasswordInput,'Debe de reingresar la contraseña');
             formValido = false;
         }else if (confirmPasswordInput.value !== passwordInput.value){
             mostrarError(errorConfirmPassword,confirmPasswordInput, 'Las contraseñas no coinciden');
